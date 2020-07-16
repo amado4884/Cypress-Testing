@@ -84,43 +84,73 @@ const Form = ({ submitForm }) => {
     <div className="adv-form">
       <h4>Form</h4>
       <form onSubmit={handleSubmit}>
-        <input name="name" value={formData.name} placeholder="Name" onChange={inputChange} />
-        <span className="error">{errors.name}</span>
-        <input name="email" value={formData.email} type="email" placeholder="Email" onChange={inputChange} />
-        <span className="error">{errors.email}</span>
+        <input name="name" value={formData.name} placeholder="Name" onChange={inputChange} data-cy="name" />
+        <span className="error" data-cy="name-error">
+          {errors.name}
+        </span>
+        <input
+          name="email"
+          value={formData.email}
+          type="email"
+          placeholder="Email"
+          onChange={inputChange}
+          data-cy="email"
+        />
+        <span className="error" data-cy="email-error">
+          {errors.email}
+        </span>
         <input
           name="password"
           value={formData.password}
           type="password"
           placeholder="Password"
           onChange={inputChange}
+          data-cy="password"
         />
-        <span className="error">{errors.password}</span>
-        <select name="role" onChange={inputChange}>
+        <span className="error" data-cy="password-error">
+          {errors.password}
+        </span>
+        <select name="role" onChange={inputChange} data-cy="role">
           <option value="">ROLE</option>
           <option value="Front End Developer">Front End Developer</option>
           <option value="Back End Developer">Back End Developer</option>
           <option value="Full Stack Developer">Full Stack Developer</option>
         </select>
-        <span className="error">{errors.role}</span>
+        <span className="error" data-cy="role-error">
+          {errors.role}
+        </span>
         <div>
           <label htmlFor="startDate">Start Date:</label>
-          <input name="startDate" value={formData.startDate} type="date" onChange={inputChange} />
-          <span className="error">{errors.startDate}</span>
+          <input name="startDate" value={formData.startDate} type="date" onChange={inputChange} data-cy="startDate" />
+          <span className="error" data-cy="startDate-error">
+            {errors.startDate}
+          </span>
         </div>
         <div>
           <label htmlFor="endDate">End Date:</label>
-          <input name="endDate" value={formData.endDate} type="date" onChange={inputChange} />
-          <span className="error">{errors.endDate}</span>
+          <input name="endDate" value={formData.endDate} type="date" onChange={inputChange} data-cy="endDate" />
+          <span className="error" data-cy="endDate-error">
+            {errors.endDate}
+          </span>
         </div>
-        <input name="reason" value={formData.reason} placeholder="Reason for Joining" onChange={inputChange} />
-        <span className="error">{errors.reason}</span>
+        <input
+          name="reason"
+          value={formData.reason}
+          placeholder="Reason for Joining"
+          onChange={inputChange}
+          data-cy="reason"
+        />
+        <span className="error" data-cy="reason-error">
+          {errors.reason}
+        </span>
         <div className="tos">
           <label htmlFor="tos">Terms of Service</label>
-          <input name="tos" type="checkbox" onChange={inputChange} checked={formData.tos} />
-          <span className="error">{errors.tos}</span>
+          <input name="tos" type="checkbox" onChange={inputChange} checked={formData.tos} data-cy="tos" />
+          <span className="error" data-cy="tos-error">
+            {errors.tos}
+          </span>
         </div>
-        <input type="submit" value="Submit" disabled={buttonDisabled} />
+        <input type="submit" value="Submit" disabled={buttonDisabled} data-cy="submit" />
       </form>
     </div>
   );

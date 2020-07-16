@@ -1,48 +1,47 @@
 import React from "react";
 
 const User = ({ user }) => {
-  console.log(user);
   return (
     <div className="user">
       <div>
         <label htmlFor="">Id:</label>
-        <span>{user.id}</span>
+        <span data-cy="user-id">{user.id}</span>
       </div>
       <div>
         <label htmlFor="">Date Created:</label>
-        <span>{user.createdAt}</span>
+        <span data-cy="user-created">{user.createdAt}</span>
       </div>
       <div>
         <label htmlFor="">Name:</label>
-        <span>{user.name}</span>
+        <span data-cy="user-name">{user.name}</span>
       </div>
       <div>
         <label htmlFor="">Email:</label>
-        <span>{user.email}</span>
+        <span data-cy="user-email">{user.email}</span>
       </div>
       <div>
         <label htmlFor="">Password:</label>
-        <span>{user.password}</span>
+        <span data-cy="user-password">{user.password}</span>
       </div>
       <div>
         <label htmlFor="">Role:</label>
-        <span>{user.role}</span>
+        <span data-cy="user-role">{user.role}</span>
       </div>
       <div>
         <label htmlFor="">Start Date:</label>
-        <span>{user.startDate}</span>
+        <span data-cy="user-startDate">{user.startDate}</span>
       </div>
       <div>
         <label htmlFor="">End Date:</label>
-        <span>{user.endDate}</span>
+        <span data-cy="user-endDate">{user.endDate}</span>
       </div>
       <div>
         <label htmlFor="">Reason:</label>
-        <span>{user.reason}</span>
+        <span data-cy="user-reason">{user.reason}</span>
       </div>
       <div>
         <label htmlFor="">Read Terms of Service?:</label>
-        <span>{user.tos ? "Yes" : "No"}</span>
+        <span data-cy="user-tos">{user.tos ? "Yes" : "No"}</span>
       </div>
     </div>
   );
